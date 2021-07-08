@@ -1,0 +1,27 @@
+.mainpage{
+
+}
+.margintop
+{
+    max-width: 381px;
+    max-height: 50px;
+
+}
+.content{
+    width: 100%;
+    line-height: 1.5em;
+    margin-left: 20px;
+   font-family:  myFirstFont ;
+    font-size: 15px;
+    // background-image:url("./images/temp.png")
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url("./fonts/Tomatoes.ttf");
+  }
+
+  @font-face {
+    font-family: myFirstFont1;
+    src: url("./fonts/Snake.ttf");
+        }
+
