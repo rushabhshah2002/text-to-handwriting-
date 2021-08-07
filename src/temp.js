@@ -19,28 +19,33 @@ import "./temp.scss";
 
 const styles = StyleSheet.create({
   page: {
-    flexDirection: "column",
-    backgroundColor: "#E4E4E4",
+
+    backgroundColor: "white",
+    width:'100%',
+    height:"100%"
   },
   section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1,
+  
+   
     display: "flex",
     flexDirection: "column",
+    width:'100%',
+    height:"100%"
   },
 });
 
 const MyDoc = ({ imgData }) => (
-  <Document>
-    <Page size="A4" style={styles.page}>
+  <Document >
+    <Page  size='A4' style={styles.page}>
       {Object.keys(imgData).map((index, i) => (
         <View style={styles.section}>
           <Img
             style={{
-              marginVertical: 100,
-              marginHorizontal: 100,
-              transform: "scale(1.5)",
+              marginVertical: 10,
+              // marginHorizontal: 10,
+         
+              width:'108%',
+              height:"100%"
             }}
             source={imgData[i]}
             src={imgData[i]}
