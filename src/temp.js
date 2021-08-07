@@ -747,9 +747,6 @@ const Temp = () => {
         </div>}
         
         
-        <div>
-          <button onClick={ocr}> check</button>
-        </div>
       </div>
     </div>
   );
