@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-file-saver": "^1.1.0",
+    "@react-pdf/renderer": "^2.0.17",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
     "dom-to-image": "^2.6.0",
+    "html2canvas": "^1.1.4",
+    "ocr-space-api-wrapper": "^1.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

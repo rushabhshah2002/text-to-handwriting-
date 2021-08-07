@@ -3,17 +3,32 @@
 }
 .margintop
 {
-    max-width: 381px;
+    max-width: 381px; 
     max-height: 50px;
 
 }
 .content{
-    width: 100%;
-    line-height: 1.5em;
+  width: 400px;
+  max-height: 580px;
+  height: 580px;
     margin-left: 20px;
-   font-family:  myFirstFont ;
-    font-size: 15px;
-    // background-image:url("./images/temp.png")
+    background-image:url("./images/temp.png")
+
+   
+}
+
+.ptag{
+  margin: 0;
+  width: 400px;
+  max-height: 580px !important;
+  height: 580px !important;
+  line-height: 20px !important;
+   font-family:  myFirstFont1 ;
+  font-size: 30pt !important;
+  text-decoration: none;
+  vertical-align: baseline !important;
+  background: transparent;
+
 }
 @font-face {
     font-family: myFirstFont;
@@ -22,6 +37,6 @@
 
   @font-face {
     font-family: myFirstFont1;
-    src: url("./fonts/Snake.ttf");
+    src: url("./fonts/Snake.woff");
         }
 

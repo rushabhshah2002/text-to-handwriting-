@@ -1,9 +1,8 @@
-import Text_handwritnig from "./text_handwriting"
+import Temp from "./temp";
 function App() {
   return (
     <div >
-     <Text_handwritnig/>
-
+<Temp/>
     </div>
   );
 }
