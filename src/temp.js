@@ -99,6 +99,15 @@ const Temp = () => {
     setImgData(temp);
     setShowImage(true)
   };
+
+  const handleUpload =({target})=>{
+   
+    const abc = filencoder(target.files[0]).then((res) => {
+      console.log(res, "post");
+      ocr(res);
+    });
+    console.log(abc)
+  }
   const filencoder = function readFileAsText(file) {
     return new Promise(function (resolve, reject) {
       let fr = new FileReader();
@@ -297,7 +306,7 @@ const Temp = () => {
             <div id="drop-area">
               <form class="my-form">
                 <p>Drag / Drop Files here</p>
-                <input type="file" id="fileElem" />
+                <input type="file" id="fileElem" onChange={handleUpload}/>
                 <label class="button" for="fileElem">
                   Upload
                 </label>
