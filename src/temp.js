@@ -57,7 +57,7 @@ const MyDoc = ({ imgData }) => (
 );
 
 const Temp = () => {
-  const [font, setFont] = useState("snake");
+  const [font, setFont] = useState("speed");
   const fontCase = {
     snake: 52,
     Strawberry: 46,
@@ -71,7 +71,7 @@ const Temp = () => {
   const linesInPage = 27;
   const [CharPerLine, setCharPerLine] = useState(52);
   const [img, setImg] = useState();
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState("blue");
   const [maxPage, setMaxPage] = useState("");
   const [imgData, setImgData] = useState("");
   const [charCount, setCharCount] = useState(0);
@@ -79,10 +79,14 @@ const Temp = () => {
   const [showLines, setShowLines] = useState(true);
   const [value, setValue] = useState("Enter Text");
   useEffect(() => {
-    setCharPerLine(fontCase[font]);
+    if(toogleResize){
+      setCharPerLine(fontCase[font]-10);
+    }
+    if(!toogleResize){
+    setCharPerLine(fontCase[font]);}
    // eslint-disable-next-line react-hooks/exhaustive-deps
   // eslint-disable-next-line 
-  }, [font]);
+  }, [font,toogleResize]);
   const ImageGeneration = () => {
     let temp = {};
 
@@ -581,7 +585,7 @@ const Temp = () => {
                           height: "399px",
                           maxHeight: "399px",
                           fontFamily: `${font}`,
-                          fontSize: "16px",
+                          fontSize: "17.5px",
                           lineHeight: "14px",
                           resize: "none",
                           color: `${color}`,
