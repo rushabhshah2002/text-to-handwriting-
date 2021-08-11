@@ -492,7 +492,7 @@ const Temp = () => {
         )}
         <div
           className="test"
-          style={{ display: "flex", justifyContent: "space-around" }}
+          style={{ display: "flex", justifyContent: "space-around" ,flexWrap:"wrap"}}
         >
    
         
