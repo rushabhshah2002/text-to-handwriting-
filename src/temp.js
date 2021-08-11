@@ -66,7 +66,7 @@ const Temp = () => {
   const [spipArea, setSpinArea] = useState(false);
   const [dataObj, setDataObj] = useState({});
   const linesInPage = 27;
-  const [CharPerLine, setCharPerLine] = useState(52);
+  const [CharPerLine, setCharPerLine] = useState(50);
   const [img, setImg] = useState();
   const [color, setColor] = useState("blue");
   const [maxPage, setMaxPage] = useState("");
@@ -252,18 +252,19 @@ const Temp = () => {
   const dataInLines = () => {
     var lines = [];
     var temp = document.getElementById("input");
+  
     var d = temp.value.split(/\n/);
     for (let i in d) {
       if (d[i]) {
         if (d[i].length > CharPerLine) {
           var b = Math.ceil(d[i].length / CharPerLine);
-          for (let j = 0; j <= b; j++) {
+          for (let j = 0; j <= b-1; j++) {
             lines.push(d[i].slice(CharPerLine * j, CharPerLine * (j + 1)));
           }
         } else {
           lines.push(d[i]);
         }
-      } else {
+      }else  {
         lines.push("");
       }
     }
