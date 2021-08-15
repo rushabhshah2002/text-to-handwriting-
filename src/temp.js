@@ -56,10 +56,11 @@ const MyDoc = ({ imgData }) => (
 const Temp = () => {
   const [font, setFont] = useState("speed");
   const fontCase = {
-    snake: 52,
-    Strawberry: 46,
-    speed: 50,
-    unlucky: 35,
+    snake: 55,
+    Strawberry: 55,
+    speed: 61,
+    unlucky: 45,
+    test:39,
   };
   const [toogleResize, setToogleResize] = useState(false);
   const [showImage, setShowImage] = useState(false);
@@ -75,16 +76,17 @@ const Temp = () => {
   const [showMargin, setShowMargin] = useState(true);
   const [showLines, setShowLines] = useState(true);
   const [value, setValue] = useState("Enter Text");
-  useEffect(() => {
-    if (toogleResize) {
-      setCharPerLine(fontCase[font] - 10);
-    }
-    if (!toogleResize) {
-      setCharPerLine(fontCase[font]);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    // eslint-disable-next-line
-  }, [font, toogleResize]);
+  // useEffect(() => {
+  //   if (toogleResize) {
+  //     setCharPerLine(fontCase[font] - 10);
+  //   }
+  //   if (!toogleResize) {
+  //     console.log(fontCase[font],"qweq")
+  //     setCharPerLine(fontCase[font]);
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   // eslint-disable-next-line
+  // }, [font, toogleResize]);
   const ImageGeneration = () => {
     let temp = {};
 
@@ -280,9 +282,21 @@ const Temp = () => {
     setDataObj(tempImg);
   };
   useEffect(() => {
+   
+    if (toogleResize) {
+      setCharPerLine(fontCase[font] - 10);
+    }
+    if (!toogleResize) {
+      setCharPerLine(fontCase[font]);
+    }
     dataInLines();
     // eslint-disable-next-line
-  }, [value]);
+  }, [value,font, toogleResize]);
+  useEffect(() => { 
+    console.log(CharPerLine)   
+    dataInLines()
+    // eslint-disable-next-line
+  }, [CharPerLine])
 
   return (
     <div>
@@ -368,6 +382,22 @@ const Temp = () => {
               >
                 {" "}
                 unlucky
+              </option>
+              <option
+                className="fontCopt"
+                value="test"
+                style={{ fontFamily: "test" }}
+              >
+                {" "}
+                test
+              </option>
+              <option
+                className="fontCopt"
+                value="test"
+                style={{ fontFamily: "test" }}
+              >
+                {" "}
+                test
               </option>
             </select>
           </div>
@@ -750,7 +780,7 @@ const Temp = () => {
                             height: "580px",
                             maxHeight: "580px",
                             fontFamily: `${font}`,
-                            fontSize: "25px",
+                            fontSize: "20px",
                             lineHeight: "20px",
                             resize: "none",
                             color: `${color}`,
